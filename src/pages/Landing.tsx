@@ -1,7 +1,7 @@
 // src/pages/Landing.tsx
 
 import React, { useState, useEffect } from 'react';
-import { Heart, Stethoscope, Calendar, Users, Star, User, Clock, Shield, Award, Phone, Mail, MapPin } from 'lucide-react';
+import { Heart, Stethoscope, Calendar, User, Shield, Award, Phone, Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Container, Button, Card, CardContent, Badge, Header, Nav, Section, Span, H1, H2, P, Div, Footer } from '../lib/dev-container';
 import { useAuth } from '../components/auth/AuthProvider';
@@ -338,7 +338,7 @@ export const Landing: React.FC = () => {
               >
                 <CardContent devId="noID" className="p-0">
                   <Div devId="noID" className="mb-4">{service.icon}</Div>
-                  <h3 className="text-xl font-semibold text-blue-900 mb-2">{service.title}</h3>
+                  <H2 devId="noID" className="text-xl font-semibold text-blue-900 mb-2">{service.title}</H2>
                   <P devId="noID" className="text-blue-600">{service.description}</P>
                 </CardContent>
               </Card>
@@ -367,7 +367,7 @@ export const Landing: React.FC = () => {
             ].map((specialty, index) => (
               <Div key={index} devId="noID" className="text-center">
                 <Div devId={getSpecialtyIconId(index)} className={`w-16 h-16 mx-auto mb-3 rounded-xl bg-gradient-to-br ${specialty.color} flex items-center justify-center`}>
-                  <span className="text-white font-bold text-lg">{specialty.name[0]}</span>
+                  <Span devId="noID" className="text-white font-bold text-lg">{specialty.name[0]}</Span>
                 </Div>
                 <Badge 
                   devId={getSpecialtyBadgeId(index)}
@@ -387,7 +387,7 @@ export const Landing: React.FC = () => {
       <Container componentId="appointment-form-section">
         <Section devId="noID" className="container mx-auto px-4 py-20" id="appointment-form">
           <Div devId="noID" className="max-w-2xl mx-auto">
-            <Card className="bg-white/90 backdrop-blur-sm border border-blue-200 shadow-xl">
+            <Card devId="noID" className="bg-white/90 backdrop-blur-sm border border-blue-200 shadow-xl">
               <CardContent devId="noID" className="p-8">
                 <Div devId="noID" className="text-center mb-8">
                   <H2 devId="noID" className="text-3xl font-bold text-blue-900 mb-4">Request an Appointment</H2>
